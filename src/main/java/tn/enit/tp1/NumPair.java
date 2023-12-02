@@ -9,6 +9,9 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 import java.io.IOException;
+/*
+le nombre total d'heures de travail et le nombre d'occurrences associées à chaque état civil (marital status).
+ */
 public static class NumPair implements Writable {
     private int first;
     private int second;
