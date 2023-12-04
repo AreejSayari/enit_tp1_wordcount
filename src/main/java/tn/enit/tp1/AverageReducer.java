@@ -1,12 +1,13 @@
 package tn.enit.tp1;
 
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public static class AverageReducer extends Reducer<Text, NumPair, Text, DoubleWritable> {
+public class AverageReducer extends Reducer<Text, NumPair, Text, DoubleWritable> {
     private DoubleWritable result = new DoubleWritable();
 
     public void reduce(Text key, Iterable<NumPair> values, Context context) throws IOException, InterruptedException {
